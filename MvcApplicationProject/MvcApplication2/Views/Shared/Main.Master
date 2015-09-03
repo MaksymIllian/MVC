@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="../../Content/Site.css" rel="stylesheet" />
+    <link href="../../Content/themes/base/jquery.ui.button.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+</head>
+    <body>
+    <form id="form1" runat="server">
+    <table border="5" width="70%">
+    <tr><th colspan="6" style="color:#800000">"The best technologies"</th></tr>
+       <tr>              
+   
+      <td id="main">
+        <asp:contentplaceholder id="MainContent" 
+                                           runat="server"> 
+        </asp:contentplaceholder>
+      </td>
+      </tr>              
+      <tr> 
+      <td colspan="3" style="text-align:center">             
+        <%: Html.ActionLink("Create report", "Report", new {type = "custom" }) %>
+      </td>
+      </tr>              
+     </table>     
+    </form>
+</body>
+</html>
+
